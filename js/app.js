@@ -58,7 +58,7 @@ document.addEventListener('keydown',e=>{if(['1','2','3','4'].includes(e.key)){co
 // Remove every legacy avatar display object: no old eyes, face or body may render.
 // Detach legacy parts from rendering; animation references remain valid until refactored.
 teacher.removeChildren();
-const portraitUrl='assets/teacher-reference-optimized.webp';
+const portraitUrl='assets/teacher-avatar-reference.webp';
 const portraitTexture=await PIXI.Assets.load(portraitUrl).catch(error=>{console.error('Teacher image missing:',portraitUrl,error);return null});
 if(portraitTexture && portraitTexture.width>0 && portraitTexture.height>0){
  const portrait=new PIXI.Sprite(portraitTexture);
